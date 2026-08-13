@@ -373,7 +373,6 @@ body {
 
     height: 76px;
 
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -399,7 +398,7 @@ body {
     gap: 4px;
     color: #737984;
     text-decoration: none;
-    font-size: 10px; /* Era 7px */
+    font-size: 10px;
     font-weight: 400;
 }
 
@@ -500,5 +499,768 @@ body {
     .nav-item {
         min-width: 48px;
         font-size: 6px;
+    }
+}
+
+/* =========================================
+   PÁGINA DE PESQUISA
+========================================= */
+
+.search-page .main-content {
+    padding-top: 0;
+}
+
+.search-area {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.search-input {
+    width: 100%;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+
+    background: #111722;
+
+    border: 1px solid rgba(255, 255, 255, 0.025);
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+.search-input:focus-within {
+    border-color: rgba(53, 78, 255, 0.55);
+
+    box-shadow:
+        0 0 0 2px rgba(53, 78, 255, 0.08);
+}
+
+.search-input .material-symbols-rounded {
+    color: #89909c;
+    font-size: 16px;
+}
+
+.search-input input {
+    width: 100%;
+    min-width: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+}
+
+.search-input input::placeholder {
+    color: #9298a3;
+}
+
+.filter-area {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 14px;
+}
+
+.filter-button {
+    height: 26px;
+
+    padding: 0 11px;
+
+    border: 0;
+    border-radius: 14px;
+
+    background: #101620;
+
+    color: #adb2bd;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.filter-button:hover {
+    transform: translateY(-1px);
+
+    background: #192131;
+}
+
+.filter-button.active {
+    background: #273ce0;
+    color: #ffffff;
+}
+
+.filter-icon-button {
+    width: 28px;
+    height: 26px;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #101620;
+
+    color: #adb2bd;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.filter-icon-button:hover {
+    background: #192131;
+    color: #ffffff;
+}
+
+.filter-icon-button .material-symbols-rounded {
+    font-size: 14px;
+}
+
+.aircraft-section {
+    width: 100%;
+}
+
+.section-heading {
+    margin-bottom: 9px;
+}
+
+.section-heading h1 {
+    color: #e6e8ed;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+.aircraft-card {
+    width: 100%;
+    min-height: 116px;
+
+    display: flex;
+
+    margin-bottom: 9px;
+
+    padding: 4px;
+
+    border-radius: 9px;
+
+    background: #101721;
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.aircraft-card:hover {
+    transform: translateY(-2px);
+
+    background: #141c27;
+
+    border-color: rgba(59, 82, 255, 0.45);
+}
+
+.aircraft-image {
+    flex: 0 0 91px;
+
+    width: 91px;
+    height: 108px;
+
+    overflow: hidden;
+
+    border-radius: 7px;
+
+    background: #192230;
+}
+
+.aircraft-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.aircraft-info {
+    min-width: 0;
+    flex: 1;
+
+    position: relative;
+
+    padding: 7px 6px 6px 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.aircraft-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 4px;
+}
+
+.aircraft-title-row h2 {
+    color: #e9ebef;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.aircraft-title-row p {
+    margin-top: 1px;
+
+    color: #b0b5bf;
+
+    font-size: 7px;
+}
+
+
+.aircraft-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    color: #c4c8d0;
+
+    font-size: 7px;
+
+    white-space: nowrap;
+}
+
+.aircraft-rating > .material-symbols-rounded:first-child {
+    color: #d6b933;
+    font-size: 10px;
+}
+
+.aircraft-rating .favorite-icon {
+    margin-left: 3px;
+
+    color: #cbd0d9;
+
+    font-size: 13px;
+}
+
+.aircraft-passengers {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    margin-top: 9px;
+
+    color: #c4c8d0;
+
+    font-size: 6px;
+}
+
+.aircraft-passengers .material-symbols-rounded {
+    font-size: 11px;
+}
+
+.aircraft-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 4px;
+
+    margin-top: auto;
+    margin-bottom: 4px;
+}
+
+.aircraft-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.aircraft-price span {
+    color: #727985;
+
+    font-size: 5px;
+}
+
+.aircraft-price strong {
+    margin-top: 1px;
+
+    color: #dce0e7;
+
+    font-size: 7px;
+    font-weight: 500;
+}
+
+
+.aircraft-status {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    color: #43c67b;
+
+    font-size: 5px;
+}
+
+.status-dot {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #43c67b;
+}
+
+.details-button {
+    align-self: flex-end;
+
+    height: 20px;
+
+    padding: 0 8px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: #273bd8;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.details-button:hover {
+    background: #334bff;
+
+    transform: translateY(-1px);
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+@media (max-width: 360px) {
+
+    .filter-area {
+        gap: 4px;
+    }
+
+    .filter-button {
+        padding: 0 8px;
+
+        font-size: 6px;
+    }
+
+    .filter-icon-button {
+        width: 25px;
+    }
+
+    .aircraft-image {
+        flex-basis: 84px;
+
+        width: 84px;
+        height: 108px;
+    }
+
+    .aircraft-info {
+        padding-left: 7px;
+    }
+
+    .aircraft-title-row h2 {
+        font-size: 7px;
+    }
+
+    .aircraft-title-row p {
+        font-size: 6px;
+    }
+}
+
+.favorites-page {
+    background: #050b15;
+}
+
+.favorites-title {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.favorites-title h1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #f1f2f5;
+}
+
+.favorites-search {
+    margin-bottom: 8px;
+}
+
+.favorites-search .search-input {
+    height: 34px;
+
+    background: #10151e;
+
+    border-radius: 18px;
+}
+
+.favorites-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+.favorite-filter {
+    height: 34px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: #111722;
+
+    color: #d0d4dc;
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.favorite-filter.active {
+    background: #263bd8;
+    color: white;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    color: #747b86;
+
+    font-size: 7px;
+}
+
+.sort-button {
+    display: flex;
+    align-items: center;
+
+    gap: 1px;
+
+    border: none;
+    background: transparent;
+
+    color: #4e64ed;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+.sort-button .material-symbols-rounded {
+    font-size: 13px;
+}
+
+.favorite-card {
+    width: 100%;
+    height: 140px;
+
+    display: flex;
+
+    margin-bottom: 14px;
+
+    padding: 5px;
+
+    background: #0d131d;
+
+    border: 1px solid #252c37;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.favorite-image {
+    width: 128px;
+    height: 130px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.favorite-info {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 4px 5px 4px 7px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 5px;
+}
+
+.favorite-top h3 {
+    font-size: 11px;
+    font-weight: 400;
+
+    color: #eeeeef;
+}
+
+.favorite-top p {
+    margin-top: 1px;
+
+    font-size: 11px;
+
+    color: #eeeeef;
+}
+
+.favorite-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    color: #cdd1da;
+
+    font-size: 8px;
+}
+
+.favorite-rating .star {
+    font-size: 14px;
+    color: #293edc;
+}
+
+.favorite-rating .heart {
+    margin-left: 4px;
+
+    font-size: 21px;
+    color: white;
+}
+
+.people {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 17px;
+
+    color: #d2d5dc;
+
+    font-size: 7px;
+}
+
+.people .material-symbols-rounded {
+    font-size: 19px;
+}
+
+.favorite-bottom {
+    margin-top: auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 5px;
+}
+
+.favorite-price {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+.favorite-price > span {
+    margin-bottom: 5px;
+
+    color: #27c866;
+
+    font-size: 7px;
+}
+
+.favorite-price small {
+    color: #777e89;
+
+    font-size: 6px;
+}
+
+.favorite-price strong {
+    margin: 1px 0;
+
+    color: #e0e2e7;
+
+    font-size: 8px;
+    font-weight: 400;
+}
+
+.favorite-card .details-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1px;
+
+    height: 28px;
+
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #273bd8;
+
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    cursor: pointer;
+}
+
+.favorite-card .details-button .material-symbols-rounded {
+    font-size: 12px;
+}
+
+.favorites-page .bottom-navigation {
+    height: 82px;
+
+    padding-top: 9px;
+
+    background: #0d131d;
+}
+
+.favorites-page .nav-item {
+    font-size: 8px;
+}
+
+.favorites-page .nav-item .material-symbols-rounded {
+    font-size: 23px;
+}
+
+.favorites-page .nav-item.active {
+    color: #293eff;
+}
+
+@media (max-width: 360px) {
+
+    .favorite-card {
+        height: 132px;
+    }
+
+    .favorite-image {
+        width: 115px;
+        height: 122px;
+    }
+
+    .favorite-top h3,
+    .favorite-top p {
+        font-size: 9px;
+    }
+
+    .people {
+        margin-top: 12px;
+    }
+
+    .favorite-price strong {
+        font-size: 7px;
+    }
+
+    .favorite-card .details-button {
+        padding: 0 7px;
+        font-size: 7px;
     }
 }
