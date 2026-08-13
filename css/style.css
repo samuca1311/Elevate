@@ -11,7 +11,7 @@ html {
 
 body {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100vh;
     overflow-x: hidden;
 
     background: #111318;
@@ -25,25 +25,19 @@ body {
 
     width: 100%;
     max-width: 430px;
-    min-height: 100dvh;
+    min-height: 100vh;
 
     margin: 0 auto;
 
-    background:
-        linear-gradient(
-            180deg,
-            #071126 0%,
-            #071126 32%,
-            #090d16 100%
-        );
+    background: linear-gradient(180deg, #071126 0%, #071126 32%, #090d16 100%);
 
     overflow-x: hidden;
 }
 
 .header {
     width: 100%;
-    min-height: 60px; 
-    padding: 16px 20px 8px; 
+    min-height: 70px;
+    padding: 16px 20px 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +51,7 @@ body {
 
 .logo {
     display: block;
-    height: 32px;
+    height: 48px;
     width: auto;
     object-fit: contain;
 }
@@ -76,7 +70,7 @@ body {
     color: #2549ff;
     cursor: pointer;
 
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 .notification-button:hover {
@@ -94,9 +88,6 @@ body {
 }
 
 .welcome {
-    position: relative;
-    z-index: 3;
-
     padding: 0 8px;
     margin-bottom: 18px;
 }
@@ -105,8 +96,6 @@ body {
     font-size: 22px;
     line-height: 1.25;
     font-weight: 600;
-
-    letter-spacing: -0.5px;
 }
 
 .welcome p {
@@ -125,46 +114,36 @@ body {
     height: 145px;
 
     margin-left: -20px;
-    margin-top: -3px;
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(7, 17, 38, 0.15),
-            rgba(7, 17, 38, 0.75)
-        );
+    background: linear-gradient(180deg, rgba(7, 17, 38, 0.15), rgba(7, 17, 38, 0.75));
 }
 
 .hero-image {
     position: absolute;
 
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 
     object-fit: cover;
-
-    inset: 0;
 }
 
 .hero-overlay {
     position: absolute;
 
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(7, 17, 38, 0) 0%,
-            rgba(7, 17, 38, 0.1) 25%,
-            rgba(7, 17, 38, 0.88) 100%
-        );
+    background: linear-gradient(180deg, rgba(7, 17, 38, 0) 0%, rgba(7, 17, 38, 0.1) 25%, rgba(7, 17, 38, 0.88) 100%);
 }
 
 .flight-search {
     position: relative;
-    z-index: 5;
 
     width: 100%;
 
@@ -175,10 +154,9 @@ body {
 
     background: rgba(18, 22, 31, 0.97);
 
-    border: 1px solid rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
 }
 
 .search-field {
@@ -191,17 +169,15 @@ body {
 
     padding: 5px 1px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.search-field:last-of-type {
-    border-bottom: 0;
+.search-field:last-child {
+    border-bottom: none;
 }
-
 
 .field-icon {
     width: 28px;
-    min-width: 28px;
     height: 34px;
 
     display: flex;
@@ -215,9 +191,7 @@ body {
     font-size: 18px;
 }
 
-
 .field-content {
-    min-width: 0;
     flex: 1;
 
     display: flex;
@@ -230,7 +204,6 @@ body {
 .field-label {
     color: #7c828e;
     font-size: 11px;
-    line-height: 1.2;
 }
 
 .field-content strong {
@@ -244,7 +217,6 @@ body {
 }
 
 .change-button {
-    flex-shrink: 0;
     min-width: 50px;
     height: 28px;
     padding: 0 10px;
@@ -253,10 +225,10 @@ body {
     background: #2539dc;
     color: #ffffff;
     font-family: inherit;
-    font-size: 11px; 
+    font-size: 11px;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.25s ease, transform 0.25s ease;
+    transition: 0.25s;
 }
 
 .search-button {
@@ -271,31 +243,23 @@ body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.25s;
 }
 
 .search-button:hover {
     background: #3048ec;
-
-    transform: translateY(-1px);
-
-    box-shadow: 0 5px 15px rgba(38, 56, 201, 0.25);
-}
-
-.search-button:active {
-    transform: translateY(0);
 }
 
 .services {
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 10px;
 
     margin-top: 14px;
 }
-
 
 .service-card {
     min-height: 68px;
@@ -311,22 +275,16 @@ body {
 
     background: #121821;
 
-    border: 1px solid rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease;
+    transition: 0.25s;
 }
 
 .service-card:hover {
     background: #171e2a;
-    transform: translateY(-2px);
 }
 
-
 .service-icon {
-    flex-shrink: 0;
-
     width: 25px;
     height: 25px;
 
@@ -339,14 +297,9 @@ body {
     font-size: 17px;
 }
 
-
-.service-card div {
-    min-width: 0;
-}
-
 .service-card h2 {
     color: #dfe2e8;
-    font-size: 12px; 
+    font-size: 12px;
     line-height: 1.25;
     font-weight: 500;
 }
@@ -360,8 +313,6 @@ body {
 
 .bottom-navigation {
     position: fixed;
-
-    z-index: 100;
 
     left: 50%;
     bottom: 0;
@@ -379,14 +330,10 @@ body {
 
     background: rgba(8, 12, 19, 0.98);
 
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 
-    box-shadow:
-        0 -10px 30px rgba(0, 0, 0, 0.22);
-
-    backdrop-filter: blur(12px);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.22);
 }
-
 
 .nav-item {
     position: relative;
@@ -408,7 +355,6 @@ body {
 
 .nav-item:hover {
     color: #b5bdff;
-    transform: translateY(-1px);
 }
 
 .nav-item.active {
@@ -430,7 +376,6 @@ body {
     background: #3150ff;
 }
 
-
 @media (min-width: 600px) {
 
     body {
@@ -441,12 +386,11 @@ body {
     }
 
     .app {
-        min-height: calc(100dvh - 40px);
+        min-height: calc(100vh - 40px);
 
         border-radius: 22px;
 
-        box-shadow:
-            0 20px 60px rgba(0, 0, 0, 0.45);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
     }
 
     .bottom-navigation {
@@ -529,18 +473,15 @@ body {
 
     background: #111722;
 
-    border: 1px solid rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.03);
 
     border-radius: 10px;
 
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 .search-input:focus-within {
     border-color: rgba(53, 78, 255, 0.55);
-
-    box-shadow:
-        0 0 0 2px rgba(53, 78, 255, 0.08);
 }
 
 .search-input .material-symbols-rounded {
@@ -550,7 +491,6 @@ body {
 
 .search-input input {
     width: 100%;
-    min-width: 0;
 
     border: 0;
     outline: 0;
@@ -600,15 +540,10 @@ body {
 
     cursor: pointer;
 
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
+    transition: 0.25s;
 }
 
 .filter-button:hover {
-    transform: translateY(-1px);
-
     background: #192131;
 }
 
@@ -636,7 +571,7 @@ body {
 
     cursor: pointer;
 
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 .filter-icon-button:hover {
@@ -683,23 +618,16 @@ body {
 
     overflow: hidden;
 
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease;
+    transition: 0.25s;
 }
 
 .aircraft-card:hover {
-    transform: translateY(-2px);
-
     background: #141c27;
 
     border-color: rgba(59, 82, 255, 0.45);
 }
 
 .aircraft-image {
-    flex: 0 0 91px;
-
     width: 91px;
     height: 108px;
 
@@ -720,10 +648,7 @@ body {
 }
 
 .aircraft-info {
-    min-width: 0;
     flex: 1;
-
-    position: relative;
 
     padding: 7px 6px 6px 8px;
 
@@ -756,7 +681,6 @@ body {
     font-size: 7px;
 }
 
-
 .aircraft-rating {
     display: flex;
     align-items: center;
@@ -770,7 +694,7 @@ body {
     white-space: nowrap;
 }
 
-.aircraft-rating > .material-symbols-rounded:first-child {
+.aircraft-rating .material-symbols-rounded:first-child {
     color: #d6b933;
     font-size: 10px;
 }
@@ -831,7 +755,6 @@ body {
     font-weight: 500;
 }
 
-
 .aircraft-status {
     display: flex;
     align-items: center;
@@ -873,15 +796,11 @@ body {
 
     cursor: pointer;
 
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: 0.25s;
 }
 
 .details-button:hover {
     background: #334bff;
-
-    transform: translateY(-1px);
 }
 
 .visually-hidden {
@@ -894,8 +813,6 @@ body {
     margin: -1px;
 
     overflow: hidden;
-
-    clip: rect(0, 0, 0, 0);
 
     white-space: nowrap;
 
@@ -919,8 +836,6 @@ body {
     }
 
     .aircraft-image {
-        flex-basis: 84px;
-
         width: 84px;
         height: 108px;
     }
@@ -1056,8 +971,6 @@ body {
     width: 128px;
     height: 130px;
 
-    flex-shrink: 0;
-
     border-radius: 8px;
 
     overflow: hidden;
@@ -1074,8 +987,6 @@ body {
 
 .favorite-info {
     flex: 1;
-
-    min-width: 0;
 
     padding: 4px 5px 4px 7px;
 
@@ -1263,4 +1174,374 @@ body {
         padding: 0 7px;
         font-size: 7px;
     }
+}
+
+/* =========================================
+   SPLASH SCREEN
+========================================= */
+
+.splash-page {
+    background: #050b15;
+}
+
+.splash-app {
+    display: flex;
+    flex-direction: column;
+}
+
+.splash-content {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.splash-top {
+    width: 100%;
+    padding-top: 48px;
+
+    text-align: center;
+}
+
+.splash-logo {
+    height: 92px;
+    width: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+.splash-tagline {
+    margin-top: 14px;
+
+    color: #e7e9ed;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.splash-hero {
+    position: relative;
+
+    width: 100%;
+    flex: 1;
+    min-height: 300px;
+
+    margin-top: 24px;
+
+    overflow: hidden;
+}
+
+.splash-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.splash-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(180deg, rgba(5, 11, 21, 0.9) 0%, rgba(5, 11, 21, 0) 20%, rgba(5, 11, 21, 0.4) 55%, rgba(5, 11, 21, 0.95) 100%);
+}
+
+.splash-actions {
+    width: 100%;
+
+    padding: 20px 24px 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.splash-button {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.splash-button.primary {
+    background: #2757d6;
+    color: #ffffff;
+}
+
+.splash-button.primary:hover {
+    background: #3868f0;
+}
+
+.splash-button.secondary {
+    background: #1a2c66;
+    color: #dbe2ff;
+}
+
+.splash-button.secondary:hover {
+    background: #22397f;
+}
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-page {
+    background: #050b15;
+}
+
+.login-hero {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.login-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.login-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(180deg, rgba(5, 11, 21, 0.15) 0%, rgba(5, 11, 21, 0.75) 100%);
+}
+
+.login-hero-logo {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    height: 70px;
+    width: auto;
+}
+
+.login-card {
+    position: relative;
+
+    margin-top: -40px;
+
+    min-height: calc(100vh - 190px);
+
+    padding: 32px 24px 40px;
+
+    background: #12151c;
+
+    border-radius: 32px 32px 0 0;
+}
+
+.login-title {
+    margin-bottom: 28px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-field {
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 16px;
+
+    border-radius: 26px;
+
+    background: #e4e6ea;
+
+    border: 2px solid transparent;
+
+    transition: 0.25s;
+}
+
+.input-field:focus-within {
+    border-color: #2757d6;
+}
+
+.input-field .material-symbols-rounded {
+    color: #5b6472;
+    font-size: 20px;
+}
+
+.input-field input {
+    flex: 1;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #1a1d24;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.input-field input::placeholder {
+    color: #6b7280;
+}
+
+.toggle-password {
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    color: #5b6472;
+
+    cursor: pointer;
+}
+
+.forgot-password {
+    align-self: flex-end;
+    margin-top: -4px;
+
+    color: #aeb4bf;
+
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+}
+
+.login-button {
+    margin-top: 8px;
+
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 26px;
+
+    background: #1f4fc4;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.login-button:hover {
+    background: #2a5fe0;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 26px 0 20px;
+
+    color: #8a909b;
+
+    font-size: 11px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-button {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 0;
+    border-radius: 26px;
+
+    background: #e4e6ea;
+
+    color: #1a1d24;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.social-button:hover {
+    background: #d3d6db;
+}
+
+.social-button svg {
+    width: 18px;
+    height: 18px;
 }
